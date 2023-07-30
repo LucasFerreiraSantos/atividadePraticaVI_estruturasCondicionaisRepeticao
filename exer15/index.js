@@ -1,4 +1,21 @@
+const ladoA = Number(prompt('Diga o lado A do triângulo: '));
+const ladoB = Number(prompt('Diga o lado B do triângulo: '));
+const ladoC = Number(prompt('Diga o lado C do triângulo: '));
+const compararLadosAB = ladoA + ladoB
+const compararLadosAC = ladoA + ladoC
+const compararLadosBC = ladoB + ladoC
 
+  if(ladoA < compararLadosBC && ladoB < compararLadosAC && ladoC < compararLadosAB){
+    document.write('Os lados fornecidos FORMAM UM TRIÂNGULO!!!<br>');
+  }
+
+  if(ladoA === ladoB || ladoA === ladoC || ladoB === ladoC){
+    document.write('TRIÂNGULO ISÓSCELES.')
+  } else if(ladoA !== ladoB && ladoB !== ladoC && ladoA !== ladoC){
+    document.write('TRIÂNGULO ESCALENO.')
+  }else{
+    document.write('TRIÂNGULO EQUILÁTERO.')
+  }
 
 // 15. Crie um algoritmo que armazene três valores, para cada um dos
 // lados de um triângulo: A, B e C. Verifique se os lados fornecidos
